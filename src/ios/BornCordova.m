@@ -22,7 +22,7 @@
         NSString* number = [command.arguments objectAtIndex:0];
 
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-        TestViewController * t = [[TestViewController alloc] initWithNibName:@"TestViewController." bundle:nil];
+        TestViewController * t = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
         
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:t animated:YES completion:^{
             
