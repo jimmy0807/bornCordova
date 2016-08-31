@@ -7,7 +7,7 @@
 
 #import <Cordova/CDVPlugin.h>
 
-@interface PhoneDialer : CDVPlugin
+@interface BornCordova : CDVPlugin
 
 - (void)dial:(CDVInvokedUrlCommand*)command;
 

@@ -8,10 +8,10 @@
 //  Revised by Trevor Cox of Appazur Solutions Inc. on 01/06/12
 //  Revised by Gaetan SENN. on 24/09/13
 
-#import "PhoneDialer.h"
+#import "BornCordova.h"
 #import <Cordova/CDV.h>
 
-@implementation PhoneDialer
+@implementation BornCordova
 
 - (void)dial:(CDVInvokedUrlCommand*)command
 {
