@@ -9,6 +9,6 @@
 
 @interface BornCordova : CDVPlugin
 
-- (void)dial:(CDVInvokedUrlCommand*)command;
+- (void)pushToNavigationController:(CDVInvokedUrlCommand*)command;
 
 @end

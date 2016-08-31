@@ -14,7 +14,7 @@
 
 @implementation BornCordova
 
-- (void)dial:(CDVInvokedUrlCommand*)command
+- (void)pushToNavigationController:(CDVInvokedUrlCommand*)command
 {
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult = nil;
