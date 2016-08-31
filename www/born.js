@@ -4,12 +4,8 @@ var platformId = require('cordova/platform').id;
 module.exports = {
 
     pushToView: function() {
-        if (platformId == 'ios') {
-            exec(null, function(err) { 
+        exec(null, function(err) { 
                 error(err);
             }, "BornCordova", "pushToNavigationController", []);
-        } else {
-            
-        }
     },
 };

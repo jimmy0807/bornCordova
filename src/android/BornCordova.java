@@ -19,57 +19,28 @@
 
 package born.plugins;
 
-import android.os.Bundle;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.json.JSONArray;
+import org.json.JSONException;
+
 
 public class BornCordova extends CordovaPlugin
 {
     @Override
     protected void pluginInitialize() {
-        if (HAS_BUILT_IN_SPLASH_SCREEN) {
-            return;
-        }
+       
     }
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("hide")) {
-            cordova.getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    webView.postMessage("splashscreen", "hide");
-                }
-            });
-        } else if (action.equals("show")) {
-            cordova.getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    webView.postMessage("splashscreen", "show");
-                }
-            });
-        } else {
-            return false;
-        }
 
-        callbackContext.success();
         return true;
     }
 
     @Override
     public Object onMessage(String id, Object data) {
-        if (HAS_BUILT_IN_SPLASH_SCREEN) {
-            return null;
-        }
-        if ("splashscreen".equals(id)) {
-            if ("hide".equals(data.toString())) {
-                this.removeSplashScreen(false);
-            } else {
-                this.showSplashScreen(false);
-            }
-        } else if ("spinner".equals(id)) {
-            if ("stop".equals(data.toString())) {
-                getView().setVisibility(View.VISIBLE);
-            }
-        } else if ("onReceivedError".equals(id)) {
-            this.spinnerStop();
-        }
+       
         return null;
     }
 }
