@@ -1,6 +1,6 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="com.born.app"
-    version="0.1.6">
+    version="0.1.7">
     <name>BornApp</name>
     <description>Cordova BornApp Plugin</description>
     <license>Apache 2.0</license>

@@ -1,6 +1,6 @@
 {
   "name": "bornCordova",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Cordova BornApp Plugin",
   "cordova": {
     "id": "com.born.app",
