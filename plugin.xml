@@ -1,6 +1,6 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="com.born.app"
-    version="0.1.4">
+    version="0.1.5">
     <name>BornApp</name>
     <description>Cordova BornApp Plugin</description>
     <license>Apache 2.0</license>
@@ -19,5 +19,15 @@
         </config-file>
         <header-file src="src/ios/BornCordova.h"/>
         <source-file src="src/ios/BornCordova.m"/>
+    </platform>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BornCordova">
+                <param name="android-package" value="born.plugins.BornCordova"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/BornCordova.java" target-dir="src/born/plugins/" />
     </platform>
 </plugin>
