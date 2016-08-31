@@ -1,0 +1,23 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.born.app"
+    version="0.1.0">
+    <name>BornApp</name>
+    <description>Cordova BornApp Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,born</keywords>
+
+    <js-module src="www/born.js" name="born">
+        <merges target="born" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="born">
+                <param name="ios-package" value="born"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/BornCordova.h"/>
+        <source-file src="src/ios/BornCordova.m"/>
+    </platform>
+</plugin>
