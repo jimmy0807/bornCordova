@@ -22,14 +22,13 @@
         NSString* number = [command.arguments objectAtIndex:0];
 
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-        TestViewController * t = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            TestViewController * t = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
         
-        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:t animated:YES completion:^{
+            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:t animated:YES completion:^{
             
-        }];
-        
-        
-
+            }];
+        });
 
         // return result
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
