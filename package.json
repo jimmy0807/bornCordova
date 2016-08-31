@@ -1,0 +1,27 @@
+{
+  "name": "bornCordova",
+  "version": "0.1.2",
+  "description": "Cordova BornApp Plugin",
+  "cordova": {
+    "id": "com.born.app",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmy808126/bornCordova.git"
+  },
+  "keywords": [
+    "cordova",
+    "born",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "jimmy",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/jimmy808126/bornCordova/issues"
+  },
+  "homepage": "https://github.com/jimmy808126/bornCordova#readme"
+}
